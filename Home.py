@@ -26,8 +26,7 @@ Your evaluation should include:
 - Missing Keywords: List all keywords from the job description that are missing in the resume.
 - Profile Summary: A brief summary of the candidate's profile based on the resume.
 Ensure that all keywords mentioned in the job description are considered.
-resume: {text}
-description: {jd}
+
 
 Provide the response in the format:
 {
