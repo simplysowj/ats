@@ -6,13 +6,11 @@ from dotenv import load_dotenv
 load_dotenv()
 openai_api_key = st.sidebar.text_input('Enter your OpenAI API Key and hit Enter', type="password")
 genai.configure(api_key=openai_api_key)
-
-def get_gemini_response(input):
-    model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content(input)
-    st.write("Full API Response:")
-    st.write(response)
+def get_gemini_repsonse(input):
+    model=genai.GenerativeModel('gemini-pro')
+    response=model.generate_content(input)
     return response.text
+
 
 def input_pdf_text(uploaded_file):
     reader = pdf.PdfReader(uploaded_file)
@@ -48,11 +46,8 @@ submit = st.button("Submit")
 
 if submit:
     if uploaded_file is not None:
-        text = input_pdf_text(uploaded_file)
-        st.write("Extracted Text from Resume:")
-        st.write(text)
+        text=input_pdf_text(uploaded_file)
         response=get_gemini_repsonse(input_prompt)
-        st.subheader("The Response is")
-        st.write(response)
+        st.subheader(response)
     else:
         st.write("Please upload the resume")
