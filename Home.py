@@ -9,7 +9,10 @@ openai_api_key = st.sidebar.text_input('Enter your OpenAI API Key and hit Enter'
 
 
 genai.configure(api_key=openai_api_key)
-
+# Sidebar
+st.sidebar.markdown("Developed by Sowjanya")
+st.sidebar.markdown("Contact: [simplysowj@gmai.com](mailto:simplysowj@gmai.com)")
+st.sidebar.markdown("GitHub: [Repo](https://github.com/simplysowj)")
 
 def get_gemini_repsonse(input):
     model=genai.GenerativeModel('gemini-pro')
