@@ -21,9 +21,9 @@ def input_pdf_setup(uploaded_file):
         first_page = pdf_document.load_page(0)
         pix = first_page.get_pixmap()
         
-        # Convert to bytes
+        # Convert to bytes (PNG format)
         img_byte_arr = io.BytesIO()
-        pix.save(img_byte_arr, format='PNG')
+        img_byte_arr.write(pix.tobytes(output="png"))
         img_byte_arr = img_byte_arr.getvalue()
 
         pdf_parts = [
