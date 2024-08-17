@@ -12,3 +12,4 @@ python-dotenv
 PyPDF2
 altair==4.0
 pdf2image
+PyMuPDF
