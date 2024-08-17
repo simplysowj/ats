@@ -51,7 +51,7 @@ if submit:
         text = input_pdf_text(uploaded_file)
         st.write("Extracted Text from Resume:")
         st.write(text)
-        response = get_gemini_response(input_prompt.format(text=text, jd=jd))
+        response=get_gemini_repsonse(input_prompt)
         st.subheader("The Response is")
         st.write(response)
     else:
