@@ -3,7 +3,7 @@ Requests
 streamlit==1.22.0
 streamlit_lottie==0.0.3
 streamlit_timeline==0.0.2
-
+python-docx
 nltk==3.8.1
 sentence_transformers
 
